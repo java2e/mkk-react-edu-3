@@ -36,7 +36,7 @@ const AllQuotues =() => {
 
 
 
-    return <QuotesList />
+    return <QuotesList quotes={loadedQuotes} />
 
 }
 

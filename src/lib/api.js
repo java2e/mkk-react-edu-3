@@ -24,7 +24,28 @@ export async function getAllQuotes() {
 
     return transformedListe;
 
+}
 
+export async function getSingleQuote(quoteId) {
+
+
+    const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
+
+    debugger
+
+    const data = await response.json();
+
+    debugger
+    if(!response.ok) {
+        throw new Error(data.message || "data cekilemedi");
+    }
+
+    const loadedQuote = {
+        id: quoteId,
+        ...data
+    }
+
+    return loadedQuote;
 
 
 }
