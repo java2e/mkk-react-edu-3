@@ -10,10 +10,14 @@ const MainNavigation = () => {
             <nav className={classes.nav}>
                 <ul>
                     <li>
-                        Bütün Yazılar
+                        <NavLink to='/quotes' activeClassName={classes.active}>
+                            Bütün Yazılar
+                        </NavLink>
                     </li>
                     <li>
-                        Yeni Yazı Ekle
+                        <NavLink to='/new-quote' activeClassName={classes.active}>
+                            Yeni Yazı
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

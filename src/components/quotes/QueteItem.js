@@ -10,7 +10,7 @@ const QueteItem = (props) => {
                 <blockquote>
                     <p> {props.text}</p>
                 </blockquote>
-                <figcaption>{props.autor}</figcaption>
+                <figcaption>{props.author}</figcaption>
             </figure>
             <Link to={`/quotes/${props.id}`}>
                 Detayı için tıklayınız...
